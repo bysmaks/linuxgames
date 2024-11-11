@@ -1,0 +1,2 @@
+privileged_mode=true
+isolated_network=true

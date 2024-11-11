@@ -1,0 +1,3 @@
+#!/bin/bash
+/bin/bash -c "chattr +i /root/dontdelete";
+/bin/bash -c "/etc/banner; bash"
