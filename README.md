@@ -6,9 +6,9 @@ LinGam - it's a battle format tasks on Linux.
 ## Requirements
 
 You need to install on linux server next package:
-python3 (version > 3.9)
-golang
-docker / docker compose
+>python3 (version > 3.9)
+>golang
+>docker / docker compose
 
 ## Deploy
 
