@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Suicide mode with time
+
+(sleep 30 && echo "Session will be terminated now." && kill -9 $$) &
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 

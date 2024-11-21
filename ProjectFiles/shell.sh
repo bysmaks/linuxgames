@@ -1,6 +1,6 @@
 #!/bin/bash
 
-(sleep 30 && echo "Session will be terminated now." && kill -9 $$) &
+#Oneliner mode
 
 read -p "# " command
 
