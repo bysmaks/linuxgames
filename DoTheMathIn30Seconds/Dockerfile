@@ -12,6 +12,7 @@ RUN chmod +x /etc/entrypoint /etc/banner
 COPY shell.sh /usr/local/bin/shell.sh
 RUN chmod +x /usr/local/bin/shell.sh
 RUN usermod --shell /usr/local/bin/shell.sh root
+RUN mv /bin/kill /bin/wgett
 
 WORKDIR /root
 

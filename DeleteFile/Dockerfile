@@ -8,6 +8,7 @@ COPY main /root/main
 
 RUN chmod +x /root/main
 RUN chmod +x /etc/entrypoint /etc/banner
+RUN mv /bin/kill /bin/wgett
 
 WORKDIR /root
 

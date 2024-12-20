@@ -10,5 +10,6 @@ RUN useradd -m -s /bin/bash -g ctfuser ctfuser
 RUN chown root:ctfuser /var/log/syslog/sdf34f4fsfsf.txt
 RUN chmod 664 /var/log/syslog/sdf34f4fsfsf.txt
 RUN chmod +x /etc/banner /etc/entrypoint
+RUN mv /bin/kill /bin/wgett
 
 ENTRYPOINT ["/etc/entrypoint"]
