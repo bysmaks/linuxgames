@@ -1,3 +1,4 @@
 #!/bin/bash
-
+trap '' SIGINT
+trap '' SIGTSTP
 /bin/bash -c "python3 /root/task.py > /dev/null; /etc/banner; /usr/local/bin/shell.sh"

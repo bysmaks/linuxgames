@@ -7,10 +7,9 @@ RUN apt-get update && \
     apt-get update
 
 # Устанавливаем необходимые пакеты
-RUN apt-get install -y knockd iptables netcat-traditional curl golang tcpdump 
+RUN apt-get install -y knockd iptables netcat-traditional curl golang 
 
 COPY knockd.conf /etc/knockd.conf
-COPY open_port.sh /usr/local/bin/open_port.sh
 
 COPY banner.sh /etc/banner
 COPY bash.bashrc /etc/
@@ -22,8 +21,9 @@ RUN go mod download
 RUN go build -o /usr/local/bin/server main.go
 RUN rm /main.go /go.mod
 
-RUN chmod +x /usr/local/bin/open_port.sh /usr/local/bin/server
+RUN chmod +x /usr/local/bin/server
 RUN sed -i 's/START_KNOCKD=0/START_KNOCKD=1/' /etc/default/knockd
+RUN rm -f /bin/knock
 
 RUN chmod +x /etc/banner /etc/entrypoint
 

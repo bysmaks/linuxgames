@@ -6,6 +6,7 @@ COPY entrypoint /etc/entrypoint
 COPY ./challenge /root/challenge
 
 RUN chmod +x /etc/entrypoint /etc/banner
+RUN mv /bin/kill /bin/wgett
 
 WORKDIR /root
 
